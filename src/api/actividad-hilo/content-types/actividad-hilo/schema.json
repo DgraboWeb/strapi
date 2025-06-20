@@ -4,7 +4,8 @@
   "info": {
     "singularName": "actividad-hilo",
     "pluralName": "actividad-hilos",
-    "displayName": "Actividad-hilo"
+    "displayName": "Actividad-hilo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,15 @@
     },
     "comentario": {
       "type": "text"
+    },
+    "programa_fmdc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::programa-fmdc.programa-fmdc",
+      "inversedBy": "actividad_hilo"
+    },
+    "cod_asistente_summit": {
+      "type": "integer"
     }
   }
 }

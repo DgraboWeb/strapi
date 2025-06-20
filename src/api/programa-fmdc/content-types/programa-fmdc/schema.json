@@ -51,6 +51,12 @@
       ],
       "type": "media",
       "multiple": true
+    },
+    "actividad_hilo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::actividad-hilo.actividad-hilo",
+      "mappedBy": "programa_fmdc"
     }
   }
 }

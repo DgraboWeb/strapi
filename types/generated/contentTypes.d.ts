@@ -373,6 +373,7 @@ export interface ApiActividadHiloActividadHilo
   extends Struct.CollectionTypeSchema {
   collectionName: 'actividad_hilos';
   info: {
+    description: '';
     displayName: 'Actividad-hilo';
     pluralName: 'actividad-hilos';
     singularName: 'actividad-hilo';
@@ -381,6 +382,7 @@ export interface ApiActividadHiloActividadHilo
     draftAndPublish: true;
   };
   attributes: {
+    cod_asistente_summit: Schema.Attribute.Integer;
     comentario: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -392,6 +394,10 @@ export interface ApiActividadHiloActividadHilo
     > &
       Schema.Attribute.Private;
     nombre: Schema.Attribute.String;
+    programa_fmdc: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::programa-fmdc.programa-fmdc'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -472,6 +478,10 @@ export interface ApiProgramaFmdcProgramaFmdc
     draftAndPublish: true;
   };
   attributes: {
+    actividad_hilo: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::actividad-hilo.actividad-hilo'
+    >;
     actividad_hilos: Schema.Attribute.Relation<
       'oneToMany',
       'api::actividad-hilo.actividad-hilo'
