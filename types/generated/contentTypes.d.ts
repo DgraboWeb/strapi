@@ -432,6 +432,33 @@ export interface ApiHabilitadoHabilitado extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPhotoPhoto extends Struct.CollectionTypeSchema {
+  collectionName: 'photos';
+  info: {
+    displayName: 'photos';
+    pluralName: 'photos';
+    singularName: 'photo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    author: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::photo.photo'> &
+      Schema.Attribute.Private;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProgramaFmdcProgramaFmdc
   extends Struct.CollectionTypeSchema {
   collectionName: 'programa_fmdcs';
@@ -1050,6 +1077,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::actividad-hilo.actividad-hilo': ApiActividadHiloActividadHilo;
       'api::habilitado.habilitado': ApiHabilitadoHabilitado;
+      'api::photo.photo': ApiPhotoPhoto;
       'api::programa-fmdc.programa-fmdc': ApiProgramaFmdcProgramaFmdc;
       'api::speaker.speaker': ApiSpeakerSpeaker;
       'api::voz.voz': ApiVozVoz;
