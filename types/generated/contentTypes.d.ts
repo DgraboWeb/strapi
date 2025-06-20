@@ -395,7 +395,7 @@ export interface ApiActividadHiloActividadHilo
       Schema.Attribute.Private;
     nombre: Schema.Attribute.String;
     programa_fmdc: Schema.Attribute.Relation<
-      'oneToOne',
+      'manyToOne',
       'api::programa-fmdc.programa-fmdc'
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -478,10 +478,6 @@ export interface ApiProgramaFmdcProgramaFmdc
     draftAndPublish: true;
   };
   attributes: {
-    actividad_hilo: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::actividad-hilo.actividad-hilo'
-    >;
     actividad_hilos: Schema.Attribute.Relation<
       'oneToMany',
       'api::actividad-hilo.actividad-hilo'

@@ -17,14 +17,14 @@
     "comentario": {
       "type": "text"
     },
-    "programa_fmdc": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::programa-fmdc.programa-fmdc",
-      "inversedBy": "actividad_hilo"
-    },
     "cod_asistente_summit": {
       "type": "integer"
+    },
+    "programa_fmdc": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::programa-fmdc.programa-fmdc",
+      "inversedBy": "actividad_hilos"
     }
   }
 }
