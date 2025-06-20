@@ -436,6 +436,7 @@ export interface ApiProgramaFmdcProgramaFmdc
   extends Struct.CollectionTypeSchema {
   collectionName: 'programa_fmdcs';
   info: {
+    description: '';
     displayName: 'Programa FMDC';
     pluralName: 'programa-fmdcs';
     singularName: 'programa-fmdc';
@@ -453,6 +454,10 @@ export interface ApiProgramaFmdcProgramaFmdc
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
     description: Schema.Attribute.Text;
+    documentos: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     horaFin: Schema.Attribute.String;
     horaInicio: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "programa-fmdc",
     "pluralName": "programa-fmdcs",
-    "displayName": "Programa FMDC"
+    "displayName": "Programa FMDC",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -40,6 +41,16 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::actividad-hilo.actividad-hilo"
+    },
+    "documentos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
