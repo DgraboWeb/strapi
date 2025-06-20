@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programa_fmdcs",
+  "info": {
+    "singularName": "programa-fmdc",
+    "pluralName": "programa-fmdcs",
+    "displayName": "Programa FMDC"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "horaInicio": {
+      "type": "string"
+    },
+    "horaFin": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "registroExperiencia": {
+      "type": "string"
+    },
+    "speakers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speaker.speaker"
+    },
+    "actividad_hilos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::actividad-hilo.actividad-hilo"
+    }
+  }
+}

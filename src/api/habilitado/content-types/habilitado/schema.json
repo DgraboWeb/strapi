@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "habilitados",
+  "info": {
+    "singularName": "habilitado",
+    "pluralName": "habilitados",
+    "displayName": "habilitado"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "reigstros": {
+      "type": "boolean"
+    },
+    "programa": {
+      "type": "boolean"
+    },
+    "speakers": {
+      "type": "boolean"
+    },
+    "diaDelEvento": {
+      "type": "boolean"
+    },
+    "comentarios": {
+      "type": "boolean"
+    },
+    "subirFotos": {
+      "type": "boolean"
+    }
+  }
+}

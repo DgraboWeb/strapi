@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "vozs",
+  "info": {
+    "singularName": "voz",
+    "pluralName": "vozs",
+    "displayName": "voz"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "zoom": {
+      "type": "string"
+    },
+    "codigo": {
+      "type": "string"
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

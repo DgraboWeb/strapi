@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actividad_hilos",
+  "info": {
+    "singularName": "actividad-hilo",
+    "pluralName": "actividad-hilos",
+    "displayName": "Actividad-hilo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "comentario": {
+      "type": "text"
+    }
+  }
+}
